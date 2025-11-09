@@ -330,26 +330,6 @@ PONG
 ^C
 ```
 
-### Detailed Message Flow
-
-| Time | Alice Sees | Bob Sees | Server Action |
-|------|------------|----------|---------------|
-| T+0s | Connects to server | - | Accept connection |
-| T+1s | `LOGIN alice`<br>`OK` | - | Authenticate Alice |
-| T+2s | `INFO alice connected` | - | Broadcast join notification |
-| T+5s | `MSG Hi everyone, I'm Alice!`<br>`MSG alice Hi everyone, I'm Alice!` | - | Broadcast message |
-| T+8s | - | Connects to server | Accept connection |
-| T+9s | - | `LOGIN bob`<br>`OK` | Authenticate Bob |
-| T+10s | `INFO bob connected` | `INFO bob connected` | Broadcast join notification |
-| T+11s | `MSG bob Hello Alice! I'm Bob` | `MSG alice Hi everyone, I'm Alice!`<br>`MSG Hello Alice! I'm Bob`<br>`MSG bob Hello Alice! I'm Bob` | Broadcast Bob's message |
-| T+15s | - | `DM alice Want to grab coffee later?` | Send DM to Alice |
-| T+16s | `DM bob Want to grab coffee later?` | - | Deliver DM |
-| T+20s | `WHO`<br>`USER alice`<br>`USER bob` | `WHO`<br>`USER alice`<br>`USER bob` | List users |
-| T+25s | `MSG Thanks for chatting, everyone!`<br>`MSG alice Thanks for chatting, everyone!` | `MSG alice Thanks for chatting, everyone!` | Broadcast message |
-| T+30s | - | `PING`<br>`PONG` | Respond to heartbeat |
-| T+35s | Disconnects | `INFO alice disconnected` | Broadcast disconnect |
-| T+40s | - | Disconnects | Close connection |
-
 ### Example with Idle Timeout
 
 ```
