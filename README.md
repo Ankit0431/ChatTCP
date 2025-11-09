@@ -12,7 +12,22 @@ A simple, multi-client TCP chat server built in C++ with object-oriented archite
 ✅ **Idle Timeout** - Automatic disconnect after 60 seconds of inactivity  
 ✅ **Heartbeat/Ping** - Keep connections alive with PING/PONG  
 ✅ **Configurable Port** - Set via environment variable or command-line  
-✅ **Object-Oriented Design** - Clean inheritance hierarchy with base Client class  
+✅ **Object-Oriented Design** - Clean inheritance hierarchy with base Client class 
+
+## Video Demo
+
+📹 **[Watch Demo Video](https://youtu.be/9ATaRwJuI04)**
+
+The demo video covers:
+- Building and running the server
+- Connecting multiple clients
+- User authentication (LOGIN)
+- Broadcasting messages (MSG)
+- Direct messaging (DM)
+- Listing users (WHO)
+- Heartbeat mechanism (PING/PONG)
+- Idle timeout demonstration
+- Graceful server shutdown
 
 ## Architecture
 
@@ -389,21 +404,6 @@ These are informational messages sent by the server to clients:
 | `INFO <username> disconnected (timeout)` | User timed out | 60s idle timeout triggered |
 | `INFO timeout-disconnect` | You were disconnected | Sent to user before timeout disconnect |
 | `INFO server-shutdown` | Server is shutting down | Ctrl+C pressed on server |
-
-## Video Demo
-
-📹 **[Watch Demo Video](https://youtu.be/9ATaRwJuI04)**
-
-The demo video covers:
-- Building and running the server
-- Connecting multiple clients
-- User authentication (LOGIN)
-- Broadcasting messages (MSG)
-- Direct messaging (DM)
-- Listing users (WHO)
-- Heartbeat mechanism (PING/PONG)
-- Idle timeout demonstration
-- Graceful server shutdown
 
 ## Key Features Implementation
 
