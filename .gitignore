@@ -1,0 +1,44 @@
+# Build directories
+build/
+bin/
+obj/
+
+# Executables
+*.exe
+*.out
+
+# Object files
+*.o
+*.obj
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.sdf
+*.opensdf
+*.VC.db
+*.VC.opendb
+
+# Intermediate files
+*.ilk
+*.pdb
+*.iobj
+*.ipdb
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
